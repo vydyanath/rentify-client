@@ -10,4 +10,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    port: parseInt(process.env.PORT) || 5173, // Use Render's PORT env variable or default to 5173
+    host: '0.0.0.0', // Binds to all available network interfaces
+  },
 });
